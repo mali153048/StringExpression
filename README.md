@@ -13,6 +13,7 @@ This is a .NET 7 based Web API project that has only one Controller MathExpressi
 **Original expression = 4+5*****2**  ==after applying division==>  **New expression = 4+10**    
 8- The exact same process is followed for Addition and Subtraction. Addition or subtraction is performed and the result is placed in the place of the addition/subtraction expression in the original expression.    
 9- The expression is solved using recursion. The 'else' condition in the Evaluate service method is the break condition for recursion where it parses the result to decimal from the string and returns the result.   
+10- **The benefit of this approach** is that, if in the future you need to add support for more operators such as '%', you can simply create a new method to the DmasService class, provide a regular expression for it and it should work without pain.    
 
 ## Testing    
 I have used the xUnit NuGet package for writing unit tests. Tests cover valid, invalid expression, and exception scenarios.    
